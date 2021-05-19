@@ -1,4 +1,6 @@
-class ClassName
+class Job
+  attr_reader :title, :link, :score, :location, :company, :date_posted
+  
   def initialize(title, link, score, location, company, date_posted)
     @title = title
     @link = link
