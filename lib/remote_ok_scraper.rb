@@ -16,7 +16,7 @@ class RemoteOKScraper
       
       score = remote_ok_job_score(title, tags, date_posted)
 
-      if score > 0
+      if score > 70
         company = raw_job.css('.companyLink h3').first.children.to_s.strip
         
         if raw_job.css('.source a').length > 0
