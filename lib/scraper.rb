@@ -1,5 +1,5 @@
-require_relative 'remote_ok_scraper'
-require_relative 'remotive_scraper'
+require_relative './scrapers/remote_ok_scraper'
+require_relative './scrapers/remotive_scraper'
 
 class Scraper  
   def initialize
@@ -15,9 +15,5 @@ class Scraper
 
     @jobs.sort! { |a, b|  b.score <=> a.score }
     return @jobs
-  end
-
-  def sort_jobs
-    
   end
 end

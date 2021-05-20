@@ -2,8 +2,7 @@ require 'open-uri'
 require 'nokogiri'
 require 'pry'
 require_relative 'blockers_n_boosters'
-require_relative 'main_job_board'
-require_relative 'job'
+require_relative '../job'
 
 def calculate_time_score(date_posted)
   score = 0
