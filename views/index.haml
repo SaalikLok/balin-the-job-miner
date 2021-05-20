@@ -1,11 +1,26 @@
-!!!
+%section.hero
+  .hero-body
+    .container
+      .columns.is-align-items-center
+        .column 
+          %h1.title.is-1 Balin the Job Miner
+          %p A web scraper built for Saalik
+        .column
+          .image.is-128x128
+            %img.is-rounded{src: "./img/balin.jpg"}
+    
+      .columns.is-multiline 
+        - @jobs.each do |job|
+          .column.is-4
+            %a{href: job.link, target: "_blank"}
+              .card 
+                %header.card-header
+                  %p.card-header-title= job.company
+                .card-content 
+                  .media-content 
+                    .title= job.title
+                .content.pl-4.pb-3
+                  %span.tag.is-medium= "Score: #{job.score}"
+                  %p= "Posted #{((Time.now - job.date_posted) / 3600).round()} hrs ago"
+                  %p= job.location
 
-%html
-  %head
-    %title Balin the Job Miner
-  %body
-    %h1 Hello, World 
-
-    %h3 This is haml powered Sinatra 
-
-    %p coming at you live
