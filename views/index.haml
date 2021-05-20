@@ -21,6 +21,6 @@
                     .title= job.title
                 .content.pl-4.pb-3
                   %span.tag.is-medium= "Score: #{job.score}"
-                  %p= "Posted #{((Time.now - job.date_posted) / 3600).round()} hrs ago"
+                  %p= "Posted #{job.hours_since_posted} hrs ago"
                   %p= job.location
 
