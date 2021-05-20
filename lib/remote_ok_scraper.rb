@@ -13,6 +13,7 @@ class RemoteOKScraper
       title = raw_job.css('.company_and_position h2').first.children.to_s
       tags = raw_job.css('.tags h3')
       date_posted = Time.parse(raw_job.css('.time time').first.attributes["datetime"].value)
+      hours_since_posted = ((Time.now - date_posted) / 3600).round()
       
       score = remote_ok_job_score(title, tags, date_posted)
 
@@ -32,7 +33,7 @@ class RemoteOKScraper
           location = ""
         end
 
-        job = Job.new(title, link, score, location, company, date_posted)
+        job = Job.new(title, link, score, location, company, hours_since_posted)
         @jobs << job
       end
     end
