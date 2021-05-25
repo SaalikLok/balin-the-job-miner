@@ -10,7 +10,10 @@
         .column
           .image.is-128x128
             %img.is-rounded{src: "./img/balin.jpg"}
-    
+      .content
+        %blockquote 
+          %p= @quote_text
+          %p= @quote_author_name_race 
       .columns.is-multiline 
         - @jobs.each do |job|
           .column.is-4
