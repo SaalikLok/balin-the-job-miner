@@ -7,9 +7,6 @@ Balin digs up the best job for software engineering job searches from several we
 
 Themed and named after Balin, one of the many dwarfs who led Bilbo to the Lonely Mountain in the Hobbit.
 
-## The Live Scraper
-Check out the Heroku link in on this page to see my job board, tailored to roles I'm looking for.
-
 ## Customizing for your Search
 Want Balin to help dig up great software engineering jobs for you? Follow these steps:
 
